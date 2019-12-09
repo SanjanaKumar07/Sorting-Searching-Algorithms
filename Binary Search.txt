@@ -1,0 +1,42 @@
+#include<stdio.h>
+void main()
+  {
+   int n,a[100],ele,i ,low,high,mid,flag=0;
+   printf("Enter the number of ele");
+   scanf("%d",&n);
+   printf("Enter the sorted array elements");
+    for(i=0;i<n;i++)
+    {
+      scanf("%d",&a[i]);
+    }
+     printf("wut u want");
+   scanf("%d",&ele);
+   low=0;
+   high=n;
+   mid=n/2;
+   while(low<=high)
+    {
+      mid=(low+high)/2;
+      if(ele==a[mid])
+       {
+           flag=1;
+           break;
+       }
+       else if(ele>a[mid])
+        {
+            low=mid+1;
+        }
+        else if(ele<a[mid])
+         {
+             high=mid-1;
+         }
+    }
+       if(flag)
+         {
+             printf("yay your wish at %d", mid+1);
+         }
+         else
+         {
+             printf("ew");
+         } 
+  }
